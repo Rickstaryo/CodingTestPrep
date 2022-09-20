@@ -7,3 +7,9 @@ def solution(n):
         else:
             answer += '박'
     return answer
+
+# 다른 사람의 방식
+
+
+def water_melon(n):
+    return "수박"*(n//2) + "수"*(n % 2)
