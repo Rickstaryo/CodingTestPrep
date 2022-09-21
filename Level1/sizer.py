@@ -7,8 +7,8 @@ def solution(s, n):
         #         2. 분기 시켜 준다
         if s[i].isupper():
             #         3. 아스키코드로 바꿔준다 더해준다
-            s[i] = chr((ord(s[i]) - ord('A') + n) + ord('A'))
+            s[i] = chr((ord(s[i]) - ord('A') + n)%26 + ord('A'))
         elif s[i].islower():
-            s[i] = chr((ord(s[i]) - ord('a') + n) + ord('a'))
-    print(helloworld)
+            s[i] = chr((ord(s[i]) - ord('a') + n)%26 + ord('a'))
+ 
     return "".join(s)

@@ -3,6 +3,7 @@ package Level1;
 public class GCDLCM {
     public int[] solution(int n, int m) {
 
+        
         int max = 0;
         int min = 0;
         // for (int i = 1; i <= n && i <= m; i++) { => better option is
