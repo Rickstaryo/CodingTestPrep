@@ -1,4 +1,4 @@
-package Level1;
+package literal;
 
 public class findKim {
 
