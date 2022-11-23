@@ -1,3 +1,4 @@
+import requests
 import random
 import time
 w = ['What doesnt kill you makes you stronger',
@@ -32,3 +33,7 @@ for str in w:
 
 print(
     "Correctness: {:0.2f}, Wrongness:{:0.2f},Velocity{:0.2f}".format(c, e, v))
+
+
+url = "http://www.naver.com"
+print(url)
