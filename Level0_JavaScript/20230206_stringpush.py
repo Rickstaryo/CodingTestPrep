@@ -26,3 +26,6 @@ def solution(A, B):
         answer += 1
 
     return -1
+
+
+def solution(A, B): return (B * 2).find(A)
