@@ -19,7 +19,7 @@ while True:
                 break
             elif stk[-1] == '[':
                 stk.pop()
-        if temp == True and not stk:
-            print("YES")
-        else:
-            print("NO")
+    if temp == True and not stk:
+        print('yes')
+    else:
+        print('no')
