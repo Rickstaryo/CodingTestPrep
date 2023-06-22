@@ -34,9 +34,7 @@ class Queue:
 
 
 q = Queue(3)
-q.enqueue(1)  # returns True
-q.enqueue(2)  # returns True
-q.enqueue(3)  # returns True
+
 for element in q.queue:
     print(q.queue)
 q.enqueue(4)  # prints "Overflow!" and returns False
