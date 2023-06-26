@@ -1,4 +1,30 @@
-# 변환
-n, k = map(int, input().split())
+def convert(a, b):
+    base = ''
 
-print(int(sum([int(i) for i in str(int(str(n), k)).split('0') if i != '']), k))
+    while a > 0:
+        a, mod = divmod(a, b)
+        base += str(mod)
+
+    return base[::-1]
+
+
+n, k = map(int, input().split())
+nums = str(convert(n, k))
+
+lst = []
+tmp = ''
+for i in nums:
+    if i == '0':
+        lst.append(tmp)
+        tmp = ''
+        continue
+    tmp += i
+if len(tmp) > 0:
+    lst.append(tmp)
+
+result = 0
+for i in lst:
+    if i.isdigit():
+        result += int(i)
+
+print(convert(result, k))
