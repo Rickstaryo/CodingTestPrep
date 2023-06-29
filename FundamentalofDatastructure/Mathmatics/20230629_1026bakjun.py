@@ -1,29 +1,12 @@
-# input
-import sys
-a, b, c = map(int, input().split())
+n = int(input())
 
+a_list = list(map(int, input().split()))
+b_list = list(map(int, input().split()))
 
-def power(a, b, c):
-    if b == 0:
-        return print(a % c)
-    elif b % 2 == 0:
-        return print(power((a*a) % c, b//2, c))
-    else:
-        return print((a*power(a, b-1, c)) % c)
+s = 0
+for i in range(n):
+    s += min(a_list) * max(b_list)
+    a_list.pop(a_list.index(min(a_list)))
+    b_list.pop(b_list.index(max(b_list)))
 
-
-a, b, c = map(int, sys.stdin.readline().split())
-
-
-def power(a, n):
-    if n == 1:
-        return a % c
-    else:
-        div = power(a, n//2)
-        if n % 2 == 0:
-            return (div*div) % c
-        else:
-            return (div*div*a) % c
-
-
-print(power(a, b))
+print(s)
