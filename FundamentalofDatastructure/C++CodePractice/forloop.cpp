@@ -1,13 +1,33 @@
-#include <bits/stdc++.h> // --- (1)
-using namespace std;     // --- (2)
-// Input output  Stream
+#include <bits/stdc++.h>
+using namespace std;
+vector<int> v;
 int main()
 {
-    vector<int> a = {2, 1, 3};
-    do
-    {
-        for (int i : a)
-            cout << i << "|";
-        cout << "\n";
-    } while (next_permutation(a.begin(), a.end()))
+    for (int i = 1; i <= 10; i++)
+        v.push_back(i);
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
+    v.pop_back();
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
+    v.erase(v.begin(), v.begin() + 3);
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
+    auto a = find(v.begin(), v.end(), 100);
+    if (a == v.end())
+        cout << "not found"
+             << "\n";
+    fill(v.begin(), v.end(), 10);
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
+    v.clear();
+    cout << "아무것도    없을까?\n";
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
+    return 0;
 }
