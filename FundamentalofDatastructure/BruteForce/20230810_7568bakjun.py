@@ -13,4 +13,5 @@ for i in arr:
             rank += 1
     print(rank, end=" ")
 # output
+
 # The code is likely resulting in an AttributeError because of a typo in the input().spilt() line. spilt() should be split(). The AttributeError occurs because there is no spilt() method in Python.

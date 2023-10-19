@@ -1,42 +1,43 @@
 #include <bits/stdc++.h>
 using namespace std;
+// n,m,adj,visited, queue, bfs,nx,ny,x,y
 const int max_n = 104;
-// Input
-//  N,M siz maze, visited adj,
-int n, m, a[max_n][max_n], visited[max_n][max_n], y, x;
+int n, m, adj[max_n][max_n], visited[max_n][max_n], x, y;
 int dy[4] = {-1, 0, 1, 0};
 int dx[4] = {0, 1, 0, -1};
-
 int main()
 {
-    // Input
+    // input
     scanf("%d %d", &n, &m);
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++)
         {
-            scanf("%1d", a[i][j]);
+            scanf("%1d", &adj[i][j]);
         }
     }
+    // bfs process
     queue<pair<int, int>> q;
-    visited[0][0] = 1; //
-    q.push({0, 0});
+    visited[0][0] = 1;
+    q.push({x, y});
     while (q.size())
     {
+        visited[x][y] = 1;
         tie(y, x) = q.front();
         q.pop();
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < n; i++)
         {
             int ny = y + dy[i];
             int nx = x + dx[i];
-            if (ny < 0 || ny >= n || nx < 0 || nx >= m || a[ny][nx] == 0)
+            // condition to check
+            if (ny < 0 || n <= ny || nx < 0 || m <= nx || adj[ny][nx] == 0)
                 continue;
             if (visited[ny][nx])
                 continue;
-            visited[ny][nx] = visited[nx][ny] + 1;
+            visited[ny][nx] = visited[y][x] + 1;
             q.push({ny, nx});
         }
     }
-    printf("%d", visited[n - 1][m - 1]);
+    scanf("%d", &visited[n - 1][m - 1]);
     return 0;
 }

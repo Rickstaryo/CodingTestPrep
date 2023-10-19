@@ -1,6 +1,5 @@
 n, l = map(int, input().split())
 
-# 수식
 
 # lx = n - l(l+1)/2
 for i in range(l, 101):

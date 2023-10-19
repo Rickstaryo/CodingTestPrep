@@ -8,6 +8,6 @@ sn = set()
 for i in range(1, 10001):
     sn.add(gen(i))
 
-for j in in range(1, 10001):
+for j in range(1, 10001):
     if j not in sn:
         print(j)

@@ -8,7 +8,7 @@ int main()
     cin.tie(NULL);
     // Input
     cin >> n >> m;
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < n; i++)
         cin >> a[i];
 
     for (int i = 0; i < n; i++)
@@ -18,6 +18,6 @@ int main()
             if (a[i] + a[j] == m)
                 cnt++;
         }
-        cout << cnt << "\n";
     }
+    cout << cnt << "\n";
 }
