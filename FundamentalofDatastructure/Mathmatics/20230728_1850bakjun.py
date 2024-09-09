@@ -1,4 +1,4 @@
-# 1850 최대공약수
+
 import sys
 input = sys.stdin.readline
 
